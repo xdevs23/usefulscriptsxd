@@ -1,6 +1,7 @@
 #!/bin/bash
 
-TEMPLATE_PATH="../AOSPTemplate"
+TEMPLATE_PATH="$XD_AOSP_TEMPLATE_PATH"
+if [ -z "$XD_AOSP_TEMPLATE_PATH" ]; then TEMPLATE_PATH="../AOSPTemplate"; fi
 CURRENT_DIR_NAME="${PWD##*/}"
 APP_PATH="$(pwd)"
 EDIT_SCRIPT_FILES="false"
