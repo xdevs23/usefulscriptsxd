@@ -24,6 +24,7 @@ elif [ "$1" == "--cp-scripts" ]; then
   EDIT_SCRIPT_FILES="true"
 elif [ "$1" == "--add-gitignore" ]; then
   cp $TEMPLATE_PATH/gitignore-file ./.gitignore
+  [ -f "$APP_PATH/gitignore-file" ] && rm $APP_PATH/gitignore-file
   EDIT_SCRIPT_FILES="false"
 else
   RESULT_OF_CP=0
