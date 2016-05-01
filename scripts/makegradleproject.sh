@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TEMPLATE_PATH="/home/simao/xos/srcs/AOSPTemplate"
+TEMPLATE_PATH="../AOSPTemplate"
 CURRENT_DIR_NAME="${PWD##*/}"
 APP_PATH="$(pwd)"
 EDIT_SCRIPT_FILES="false"
