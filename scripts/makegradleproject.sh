@@ -30,6 +30,7 @@ else
   if [ -e "src/" ]; then
     cp -R $TEMPLATE_PATH/* ./
     cp $TEMPLATE_PATH/gitignore-file ./.gitignore
+    mkdir -p $APP_PATH/app/src/main/
     ln -s $APP_PATH/src app/src/main/java
     ln -s $APP_PATH/res app/src/main/res
     ln -s $APP_PATH/AndroidManifest.xml app/src/main/AndroidManifest.xml
