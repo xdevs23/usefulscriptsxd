@@ -63,10 +63,10 @@ if [ CONTINUEXEC ]; then
   adb $ADBARGS wait-for-device
   adb $ADBARGS shell pm set-install-location 1
   adb $ADBARGS shell pm install -rdtf /sdcard/$LOCL_FN
-  if [ OPEN_ACTIVITY = 1]; then
+  if [ OPEN_ACTIVITY == 1] ; then
     adb $ADBARGS shell am start -n $APPK/$START_ACTIVITY
   fi
-  if [ START_LOGCAT  = 1]; then
+  if [ START_LOGCAT  == 1 ]; then
     if [ "$1" == "--grp" ]; then adb $ADBARGS logcat -v tag -s $APP_TAG:* | grep $2
     else adb $ADBARGS logcat -v tag -s $APP_TAG:*
     fi
