@@ -33,6 +33,7 @@ else
     ln -s $APP_PATH/src app/src/main/java
     ln -s $APP_PATH/res app/src/main/res
     ln -s $APP_PATH/AndroidManifest.xml app/src/main/AndroidManifest.xml
+    rm $APP_PATH/README.md
   else
     echo "Not a compatible project. Please make sure that you have a src folder"
     RESULT_OF_CP=1
