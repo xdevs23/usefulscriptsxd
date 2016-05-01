@@ -23,13 +23,13 @@ elif [ "$1" == "--cp-scripts" ]; then
   cp $TEMPLATE_PATH/buildDebugApp.sh ./
   EDIT_SCRIPT_FILES="true"
 elif [ "$1" == "--add-gitignore" ]; then
-  cp $TEMPLATE_PATH/.gitignore ./
+  cp $TEMPLATE_PATH/gitignore-file ./.gitignore
   EDIT_SCRIPT_FILES="false"
 else
   RESULT_OF_CP=0
   if [ -e "src/" ]; then
     cp -R $TEMPLATE_PATH/* ./
-    cp $TEMPLATE_PATH/.gitignore ./
+    cp $TEMPLATE_PATH/gitignore-file ./.gitignore
     ln -s $APP_PATH/src app/src/main/java
     ln -s $APP_PATH/res app/src/main/res
     ln -s $APP_PATH/AndroidManifest.xml app/src/main/AndroidManifest.xml
